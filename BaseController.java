@@ -12,7 +12,7 @@ public class BaseController extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 
-        String requestURI = req.getRequestURI();
+        String reqURI = req.getRequestURI();
         String[] split = requestURI.split("r/");
         String methodName =split[split.length-1];
         // 通过反射获取要执行的方法
